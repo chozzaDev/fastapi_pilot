@@ -14,7 +14,7 @@ class Config:
     DB_ECHO: bool = True
     DEBUG: bool = False
     TEST_MODE: bool = False
-    DB_URL: str = environ.get("DB_URL", "mysql+pymysql://hatam:#K3w0c77002#@localhost/hatam?charset=utf8mb4")
+    DB_URL: str = environ.get("DB_URL", "mysql+pymysql://hatam@localhost/hatam?charset=utf8mb4")
 
 
 @dataclass
@@ -38,7 +38,7 @@ class TestConfig(Config):
     DB_ECHO: bool = True
     DEBUG: bool = False
     TEST_MODE: bool = False
-    DB_URL: str = environ.get("DB_URL", "mysql+pymysql://hatam:#K3w0c77002#@localhost/hatam?charset=utf8mb4")
+    DB_URL: str = environ.get("DB_URL", "mysql+pymysql://hatam@localhost/hatam?charset=utf8mb4")
     TRUSTED_HOSTS = ["*"]
     ALLOW_SITE = ["*"]
 
